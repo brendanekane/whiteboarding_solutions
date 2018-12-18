@@ -7,12 +7,12 @@ def largest_rectangle_area(heights)
     temp_size, max_size = 0, 0
     height, position = 0, 0
 
-    calc_max_height = lambda {
+    calc_max_height = lambda do
       temp_h = stack_h.pop
       temp_p = stack_p.pop
       temp_size = temp_h * ( position - temp_p)
       max_size = [temp_size, max_size].max
-    }
+    end
 
     heights.each_with_index do |bar_height, idx|
       height = bar_height
