@@ -5,3 +5,20 @@ const inorderTraversal = (root, result = []) => {
     if (root.right) inorderTraversal(root.right, result);
     return result;
 };
+
+
+// another solution
+
+const inorderTraversal2 = root => {
+  if (!root) return [];
+  else {
+    const result = [];
+    const traverseRec = node => {
+      if (node.left) traverseRec(node.left);
+      result.push(node.val);
+      if (node.right) traverseRec(node.right);
+    };
+    traverseRec(root);
+    return result;
+  }
+};
