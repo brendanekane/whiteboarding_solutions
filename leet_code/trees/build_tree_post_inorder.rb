@@ -1,10 +1,11 @@
 class TreeNode
 
-  attr_accessor :val, :left, :right
+  attr_accessor :val, :left, :right, :next
   def initialize(val)
     @val = val
     @left = nil
     @right = nil
+    @next = nil
   end
 end
 

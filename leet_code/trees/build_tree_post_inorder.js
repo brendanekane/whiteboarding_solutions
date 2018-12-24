@@ -3,6 +3,7 @@ class TreeNode{
       this.val = val;
       this.left = null;
       this.right = null;
+      this.next = null;
     }
 }
 
