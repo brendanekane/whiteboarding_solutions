@@ -12,8 +12,8 @@ end
 def preorder_traversal2(root)
   return [] if !root
   result = [root.val]
-  result.concat(preorder_traversal(root.left))
-  result.concat(preorder_traversal(root.right))
+  result.concat(preorder_traversal2(root.left))
+  result.concat(preorder_traversal2(root.right))
   result
 end
 
